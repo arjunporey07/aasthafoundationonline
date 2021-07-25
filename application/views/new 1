@@ -1,0 +1,532 @@
+database_name: aastha
+	table name: events
+		table col: 
+			1. id(primary key:int)
+			2. event_title(varchar:255)
+			3. event_desc(text)
+			4. event_img(varchar:255)
+			5. event_dt(datetime)
+			6. event_status(enam:active,inactive,deleted)
+	
+	
+	table name: memberlist
+		table col: 
+			1. id(primary key:int)
+			2. member_name(varchar:255)
+			3. member_img(varchar:255)
+			4. member_designation(text)
+			5. member_position(text)
+			6. member_quote(text)
+			7. member_id_link
+				a. facebook_link
+				b. instagram_link
+				c. twitter_link
+			8. member_join_dt(datetime)
+			9.member_status(enam:active,inactive,deleted)
+			
+	table name: new_activity
+		table col: 	
+			1. id(primary key:int)
+			2. new_event_img(varchar:255)
+			3. new_event_title(varchar:255)
+			4. new_event_details(text)
+			5. new_event_location(varchar:255)
+			6. new_event_route(varchar:255)
+			7. new_event_dt(datetime)
+			
+			
+			
+			
+			
+			
+			
+			APU MONDAL
+			cif 85612213424
+			a/c 30880031395
+			ifsc SBIN0000056
+			
+			
+			
+			
+			
+			bootstrap flipping-cards/
+			
+			https://mdbootstrap.com/plugins/jquery/flipping-cards/
+			
+			bootstrapmade.com flattern
+			
+			
+			
+			<div class="card-group justify-content-center">
+					<?php 
+					foreach($member_list as $i=>$row)
+					{	
+					?>
+					<div style="padding-top:3%; padding-left:3%">
+						<div class="card shadow" style="width:30rem;">
+							<div class="card-body">
+								<div class="media border">
+									<div class="inner">
+										<a href="<?php echo base_url(); ?>public/img/<?php echo (!empty($row['member_img'])?$row['member_img']:'Arjun.jpg')?>">
+											<img src="<?php echo base_url(); ?>public/img/<?php echo (!empty($row['member_img'])?$row['member_img']:'Arjun.jpg')?>" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:100px;">
+										</a>
+									</div>
+									<div class="media-body">
+										<h2><?php echo $row['member_name']?></h2><small><i><?php echo substr($row['member_designation'],0,100); ?></i></small>
+										<p><?php echo substr($row['member_position'],0,100); ?></p>
+										<p><?php echo substr($row['member_quote'],0,100); ?></p>
+										<div class="link" style="float:left">
+											<p class="btn" style="background:#3b5999" href="#"><i class="fa fa-facebook" style="color:#fff" aria-hidden="true"></i></p>
+											<p class="btn" style="background:#55acee" href="#"><i class="fa fa-twitter" style="color:#fff" aria-hidden="true"></i></p>
+											<p class="btn" style="background:#e4405f" href="#"><i class="fa fa-instagram" style="color:#fff" aria-hidden="true"></i></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<?php } ?>
+					
+					
+					
+					
+		<div id="banner_image" alt="responsive image">
+			
+				<section class="registration-section">
+					<div class="container">
+						<h2>Member Registration</h2>
+						<p>Put Your Hand Forward | বাড়িয়ে দাও তোমার হাত  |  अपना हाथ बढ़ाएं </p>
+						<div class="registration-form" class="panel-body">
+						
+							<form>
+							
+								<center>
+									<div class="conditions">
+										<h2>Guideline For Membership</h2>
+										<ol class="list-group">
+											<li>First item First item First item First item First item  First item First item First item First item First item </li>
+											<li>Second item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+											<li>Third item</li>
+										</ol>
+									</div>
+								</center>
+								<br>
+							
+							
+								<input type="text" placeholder="Name" required>
+								<input type="text" placeholder="Designation Or Profession (Eg: Student/Working/others.)" required>
+								<input type="Email" placeholder="Email" required>
+								<input type="number" placeholder="Moblie Number (Eg: Contact/WhatsApp)" required>
+								
+								<p><strong>Address</strong></P>
+								<input type="varchar" placeholder="Local Address" required>
+								<input type="text" placeholder="City" required>
+								<input type="text" placeholder="State" required>
+								<input type="text" placeholder="Country" required>
+								<input type="number" placeholder="Zip" required>
+								
+								<textarea type="message" placeholder="Why Are You Want To Join Aastha?" required></textarea>
+								
+						
+					
+								
+								
+								<div class="custom-control custom-checkbox my-1 mr-sm-2">
+								<input type="checkbox" class="custom-control-input" id="customControlInline" onclick="terms_changed(this)">
+								<label class="custom-control-label" for="customControlInline">I Am Agree With All Terms And Conditions In My Own Sense. Let's Check Me Out.</label>
+								 </div>
+								<div class="space">
+								<button class="submit" id="submit_button" onclick="alert_message()" disabled>Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			
+			
+		</div>
+		
+		<script>
+			//on whether a checkbox has been ticked or not.
+			function terms_changed(termsCheckBox){
+				//If the checkbox has been checked
+				if(termsCheckBox.checked){
+					//Set the disabled property to FALSE and enable the button.
+					document.getElementById("submit_button").disabled = false;
+					
+					
+				} else{
+					//Otherwise, disable the submit button.
+					document.getElementById("submit_button").disabled = true;
+					
+					
+				}
+			}
+			
+			
+		</script>
+					
+					
+					
+					AOS.init({
+  duration: 1200,
+})
+
+
+fera ta ki abar howrah-bandel e hobe.....
+
+
+“Happiness doesn’t result from what we get, but from what we give.” ―Ben Carson
+
+“We make a living by what we get. We make a life by what we give.” ―Winston S. Churchill
+
+“It’s not how much we give but how much love we put into giving.”
+
+– Mother Teresa
+
+ “Yes I make charities but it isn’t a big deal, it’s my responsibility towards society.”
+
+ – Akshay Kumar
+
+“When we give cheerfully and accept gratefully, everyone is blessed.”
+― Maya Angelou
+
+
+
+intro:--
+
+1st slide caption font-size decrease for mobile view....
+
+1st +4th slide author name view....
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.803105956342!2d87.91232611479306!3d22.62382658515646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f875eca8a3bcad%3A0x46f81ac0999815a6!2sJhikra%20High%20School!5e0!3m2!1sen!2sin!4v1604126351922!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+
+
+<input type="text"   name="member_name" placeholder="Name">
+								<input type="varchar" placeholder="Designation Or Profession (Eg: Student/Working/others.)" name="member_designation"  required>
+								<input type="file"  name="member_img" placeholder="Your Photo" required>
+								<input type="email" placeholder="Email" name="member_email" required>
+								<input type="number" placeholder="Moblie Number (Eg: Contact/WhatsApp)" name="member_number" required>
+								<input type="password" placeholder="password" name="password" required>
+						<!--		<input type="password" placeholder="Confrim password" name="cpassword" required> -->
+								
+								<div class="form-group">
+                                    <label for="inputState">Gender</label>
+                                    <br>
+                                    <select id="inpugender" class="form-control" name="gender" required>
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                        
+                                    </select>
+                                </div>
+								
+								<p><strong>Address</strong></P>
+								<input type="varchar" placeholder="Local Address" name="local_address" required>
+								<input type="text" placeholder="City" name="city" required>
+								<input type="text" placeholder="State" name="state" required>
+								<input type="text" placeholder="Country" name="country" required>
+								<input type="number" placeholder="Zip/Pin" name="zip" required>
+								
+								
+								<p><strong>Social Media Profile Link(Please Choose Any One Or More)</strong></P>
+								<input type="varchar" placeholder="Facebook" name="facebook_link">
+								<input type="varchar" placeholder="Twitter(If You Have)" name="twitter_link">
+								<input type="varchar" placeholder="Instagram(If You Have)" name="instagram_link">
+								
+								
+								<textarea  id="member_quote" name="member_quote" placeholder="Your Fevourite Quote"></textarea>
+								<textarea type="message" placeholder="Why Are You Want To Join Aastha?" name="message" required></textarea>
+								
+
+								<div class="custom-control custom-checkbox my-1 mr-sm-2">
+								<input type="checkbox" class="custom-control-input" id="customControlInline" onclick="terms_changed(this)">
+								<label class="custom-control-label" for="customControlInline">I Am Agree With All Terms And Conditions In My Own Sense. Let's Check Me Out.</label>
+								 </div>
+								<div class="space">
+								<button class="submit" id="submit_button" onclick="alert_message()" disabled>Submit</button>
+								</div>
+
+								radial-gradient( circle 266px at 12% 29.3%,  
+							rgba(58,219,154,0.93) 2%, rgba(153,228,208,1) 38.6%, rgba(142,246,219,0.82) 73.9%, rgba(253,255,238,1) 100.7% );
+
+
+
+
+
+<div class="row row_style">
+                <div class="col-sm-4 col-sm-offset-4">
+					<div class="panel-heading">
+						<h1>New Activity Form</h1>
+					</div>
+					<div class="panel-body">
+						<form action="<?php echo base_url(); ?>index.php/Welcome/save_new_activity" method="POST"  enctype="multipart/form-data">
+							
+							<div class="form-group">
+								<input type="text" class="form-control"  name="new_activity_title" placeholder="new_activity_title">
+							</div>
+							<div class="form-group">
+								<input type="file" class="form-control" name="new_activity_img" placeholder="new_activity_img">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="new_activity_details" placeholder="new_activity_details"></textarea>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="new_activity_location" placeholder="new_activity_location"></textarea>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="new_activity_route" placeholder="new_activity_route"></textarea>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="new_activity_dt" placeholder="yyyy-mm-dd hh:mm:ss">
+							</div>
+							<button type="submit" class="btn btn-primary mb-2">Upload</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			
+
+<div class="row" style="padding-top: 10px">
+						<div class="col-lg-8 col-md-4 col-sm-6 col-6 p-1">
+							<h2>Feedback Us</h2>
+							<p>Help Us To Put Your Own OPinion Or Any Query</p>
+							<div class="feedback-form">
+								<div>
+									<form>
+										<input type="text" placeholder="Name" required>
+										<input type="Email" placeholder="Email" required>
+										<textarea type="message" placeholder="Message" required></textarea>
+										<button class="submit">Let's Talk</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-lg- col-md-4 col-sm-6 col-6 p-3">
+							<div id="set">
+								<h3>Know More About This Event:<h3>
+								<div class="link">
+									<ul>
+										<li><a href="https://www.facebook.com/groups/863723317347552/?ref=br_tf&epa=SEARCH_BOX"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+										<li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>	
+					</div>
+
+
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<?php $this->load->view('head') ?>
+		<link href="<?php echo base_url(); ?>public/css/gallery.css" rel="stylesheet" type="text/css"/>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<!-- or -->
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+		
+		<style>
+		.navbar{
+			background:#000;
+		}
+			#banner_image{
+				padding-top: 75px;
+				padding-bottom: 50px;
+				text-align: center;
+				background-image: radial-gradient( circle 1165px at -5.4% 50.5%,  rgba(0,255,239,1) 4.1%, rgba(243,4,251,1) 47%, rgba(251,223,0,1) 89.5% );
+				height:;
+				background-size:100% 100%;
+			}
+	</style>
+	</head>
+	<body>
+		
+		<?php $this->load->view('nav') ?>
+		<div id="banner_image" alt="responsive image">
+			<!-- Header --> 
+			<div class="header">
+			  <h1>Our Gallery</h1>
+			  <p></p>
+			</div>
+
+			<!-- Photo Grid -->
+			<div class="container" style="max-width:90%;" >
+				<div class="tz-videos">
+					<div class="row">
+						<?php 
+							
+							foreach($our_works_list as $i=>$row)
+							{
+						?>
+							<?php 
+								$imgs=explode(',',$row['our_works_details_img']);
+								foreach($imgs as $img){
+							?>
+								<div class="col-lg-2 col-md-3 col-sm-3 col-4 p-1" style="box-shadow: 0px 0px 50px #000; " >
+									<a href="<?php echo base_url(); ?>public/upload/our_works_img/<?php echo (!empty($img)?$img:'Aastha.jpg')?>">
+										<img src="<?php echo base_url(); ?>public/upload/our_works_img/<?php echo (!empty($img)?$img:'Aastha.jpg')?>" class="img-fluid"  alt="card image cap" style="max-height:12rem; max-height:12rem">
+									</a>
+								</div>
+							<?php }?>
+						<?php }?>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		
+		<?php $this->load->view('footer') ?>
+		
+		<!-- Scripts -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+		 
+		<script>
+			baguetteBox.run('.tz-videos');
+		</script>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<?php $this->load->view('head') ?>
+	<!--	<link href="<?php echo base_url(); ?>public/css/gallery.css" rel="stylesheet" type="text/css"/> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+		
+		
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
+		<style>
+		.grid-item { width: 20%; }
+		/* 2 columns */
+		.grid-item--width2 { width: 40%; }
+
+	</style>
+	</head>
+	<body>
+		
+		<?php $this->load->view('nav') ?>
+		<div id="gallery" alt="responsive image">
+			<!-- Header --> 
+			<div class="header">
+			  <h1>Our Gallery</h1>
+			  <p></p>
+			</div>
+			
+			<!-- Photo Grid -->
+			<div class="tab-pane" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+				<div class="tz-videos">
+					<div class="grid">
+					
+						<?php 
+									
+							foreach($our_works_list as $i=>$row)
+							{
+						?>
+							<?php 
+								$imgs=explode(',',$row['our_works_details_img']);
+								foreach($imgs as $img){
+							?>
+								<div class="grid-item p-1">
+									<a href="<?php echo base_url(); ?>public/upload/our_works_img/<?php echo (!empty($img)?$img:'Aastha.jpg')?>">
+									
+									<img src="<?php echo base_url(); ?>public/upload/our_works_img/<?php echo (!empty($img)?$img:'Aastha.jpg')?>" class="img-fluid"  alt="card image cap" >
+									</a>
+								</div>
+							<?php }?>
+						<?php }?>
+					
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<?php $this->load->view('footer') ?>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+		 
+		<script src="/path/to/masonry.pkgd.min.js"></script>
+
+		<script>
+			var elem = document.querySelector('.grid');
+			var msnry = new Masonry( elem, {
+			// options
+			itemSelector: '.grid-item',
+			columnWidth: 200
+			});
+
+			// element argument can be a selector string
+			//   for an individual element
+			var msnry = new Masonry( '.grid', {
+			// options
+			});
+			// external js: masonry.pkgd.js
+
+			$('.row').masonry({
+			itemSelector: '.grid-item',
+			columnWidth: 160
+			});
+			baguetteBox.run('.baguetteBoxFive', {
+    captions: function(element) {
+        return element.getElementsByTagName('img')[0].alt;
+    }
+});
+			baguetteBox.run('.tz-videos');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+	padding:0 auto;
+	
+}
+.registration-section .container{
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+}
+
+.registration-section .container h2{
+    text-align:Center;
+    text-decoration:Underline;
+    text-underline-position:under;
+    color: rgb(238,235,235);
+    letter-spacing: 2px;
+    
+}
+.registration-section .container p{
+    text-align:center;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    color:#fff;
+    letter-spacing:2px;
+    
+}
+
+.registration-form{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+}
+
+#set{
+    padding-top: 5%;
+    
+}
+h3{
+    padding-top:5%;
+    text-align:Center;
+    color: rgb(238,235,235);
+    letter-spacing: 2px;
+    
+}
+.registration-section .container .registration-form .conditions{
+    padding-top:5%;
+    width:80%;
+}
+
+.list-group{
+    padding-top:2%;
+    color:#fff;
+}
+
+.space{
+    padding-top:3%;
+}
+
+
+.custom-control{
+    padding-top:3%;
+    color:#fff;
+}
+
+
+			
+
+
+.form-info{
+	font-size:16px;
+	font-style:italic;
+	color:#fff;
+	letter-spacing: 2px;
+}
+
+input{
+	padding: 10px;
+	margin:10px;
+	width:70%;
+	background: rgba(136,13,133,0.5);
+	color: #fff;
+	border:none;
+	outline:none;
+}
+
+input::placeholder{
+	color:#fff;
+}
+
+textarea{
+	padding: 10px;
+	margin:10px;
+	width:70%;
+	background: rgba(136,13,133,0.5);
+	color: #fff;
+	border:none;
+	outline:none;
+}
+textarea::placeholder{
+	color:#fff;
+}
+
+.form-group{
+    padding: 10px;
+	margin:10px;
+	width:70%;
+	background: rgba(136,13,133,0.5);
+	color: #fff;
+	border:none;
+	outline:none;
+}
+
+.form-group::placeholder{
+	color:#fff;
+}		
+
+button{
+	padding-top:5%;
+}
+button{
+	
+	
+	padding:4px;
+	outline:none;
+	font-size:13px;
+	font-weight:bold;
+	letter-spacing: 2px;
+	height:33px;
+	text-align:center;
+	margin-left:;
+	border: 2px solid #fff;
+	color:#fff;
+	background: rgba(136,13,133,0.5);
+}
+
+button:hover{
+	border:2px solid #8E44AD;
+	border-radius: 200px;
+	/*transition: background-color: 0.2s, border: 0.2s, color: 0.2s;
+	background-color:transparent;*/
+}
+
+button:disabled{
+	background-color:#eee;
+}
+
+.list-group{
+	padding-top:2%;
+	color:#fff;
+}
+
+.space{
+	padding-top:3%;
+}
+
+
+.custom-control{
+	padding-top:3%;
+	color:#fff;
+}
